@@ -7,6 +7,9 @@ public class aLotOfPizza {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int toppingSum = 0;
+		//i let the user choose the price per top
+		//although i think that a better way to treat toppings is with 3 different 
+		//types of toppings according to their price.
 		int toppingPrice;
 		System.out.println("please enter the price per 1 topping:");
 		toppingPrice = scan.nextInt();
