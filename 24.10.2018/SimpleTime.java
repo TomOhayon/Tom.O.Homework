@@ -58,7 +58,14 @@ public class SimpleTime {
 	}
 	
 	public void tick() {
-		this.second=(this.second+1)%59;
+		this.addSecond(this.second+1);
+		if (this.getSecond()==0) {
+			this.addMinute(this.minute+1);
+			if (this.getMinute()==0) {
+				this.addHour(this.hour+1);
+			}
+		}
+	
 	}
 	
 	public boolean equals(SimpleTime S) {
