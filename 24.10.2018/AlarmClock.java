@@ -18,7 +18,7 @@ public class AlarmClock extends Alarm {
 	// ------methods------
 	public void setAlarm(int alarmNum, SimpleTime time, boolean isSet, int snoozeTime, boolean isSnooze) {
 		this.alarmNum = alarmNum;
-		A[alarmNum]= new Alarm();
+		A[alarmNum] = new Alarm();
 		A[alarmNum].setTime(time.getHour(), time.getMinute(), time.getSecond());
 		A[alarmNum].setSnoozeTime(snoozeTime);
 		A[alarmNum].setSet(isSet);
@@ -30,11 +30,10 @@ public class AlarmClock extends Alarm {
 			alarm.setTime(hour, minute, second);
 		}
 	}
-	
-	public void alarmRing (SimpleTime S) {
-		if (this.isSnooze() && S.getHour()==A[this.alarmNum].getTime().getHour() && S.getMinute()==A[this.alarmNum].getTime().getMinute() && S.getSecond()==A[this.alarmNum].getTime().getSecond()) {
+
+	public void alarmRing(SimpleTime S) {
+		if (this.A[alarmNum].getHour()==S.getHour() && this.A[alarmNum].getMinute()==S.getMinute() && this.A[alarmNum].getMinute()==S.getMinute()) {
 			System.out.println("Ring Ring - good morning MotherFucker!!!");
 		}
 	}
-
 }

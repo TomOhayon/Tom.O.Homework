@@ -25,14 +25,17 @@ public class ClockApp {
 		alarmTime.setTime(Integer.parseInt(A[0]), Integer.parseInt(A[1]), Integer.parseInt(A[2]));
 		//if u want to check 12 hour format then validate the following line of code:
 		// c.setIs24Hours(false);
-		c.setAlarm(1 , alarmTime , true, 0, true);
+		c.setAlarm(1 , alarmTime , true, 5, true);
 		Date timeToRun = new Date();
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask() {
 			public void run() {
-				System.out.println(c.toString());
-				c.alarmRing(alarmTime);
 				c.tick();
+				System.out.println(c.toString());
+				System.out.println(alarmTime.toString());
+				if(c.toString().equals(alarmTime.toString())){
+					c.alarmRing(alarmTime);			
+				}
 			}
 		},1000, 1000);
 	}
