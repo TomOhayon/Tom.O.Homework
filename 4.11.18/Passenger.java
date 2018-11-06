@@ -1,9 +1,10 @@
+package HOMEWORK;
 
 public class Passenger {
 	//------properties------
-	private double ticketPrice;
-	private double allowedWeight;
-	private double extraCharge;
+	private  double  ticketPrice;
+	private  double allowedWeight;
+	private  double extraCharge;
 	private Suitcase suitcase;
 	//------get+set------
 	public double getTicketPrice() {
@@ -41,6 +42,6 @@ public class Passenger {
 	//------methodes------
 	
 	public String toString(){
-		return "ticket price:"+this.getTicketPrice()+"\nallowed weight:"+getAllowedWeight()+"\ncharge for every extra gr:"+getExtraCharge()+"\nsuitcase containes:"+suitcase;
+		return "ticket price:"+this.getTicketPrice()+"\nallowed weight:"+getAllowedWeight()+"\ncharge for every extra gr:"+getExtraCharge()+"\nsuitcase containes:";
 	}
 }
